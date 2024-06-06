@@ -21,6 +21,7 @@ import { getOneWriting } from "../lib/irys";
 import { FaRegCircleQuestion } from "react-icons/fa6";
 import { IoArrowBack } from "react-icons/io5";
 import { IoMdClose } from "react-icons/io";
+import IndividualWritingDisplayPage from "./IndividualWritingDisplayPage"
 import { MdMenuOpen } from "react-icons/md";
 import UserDisplayPage from "./UserDisplayPage";
 import { IoIosHome, IoMdSettings } from "react-icons/io";
@@ -508,8 +509,6 @@ const GlobalApp = ({ alchemy, loginResponse }) => {
       case "/me":
         return <UserFeed exportWallet={exportWallet} thisWallet={wallet} />;
 
-      case "/write?":
-        return <LibraryPage />;
       case `/writing/${route.split("/").pop()}`:
         return <IndividualWritingDisplayPage />;
       case "/settings":
