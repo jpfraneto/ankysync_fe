@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import DesktopWritingGame from "./DesktopWritingGame";
 import { usePrivy, useWallets } from "@privy-io/react-auth";
-import { Righteous, Inter } from "next/font/google";
+import { Righteous } from "next/font/google";
 import { WebIrys } from "@irys/sdk";
 import { getAnkyverseDay, getAnkyverseQuestion } from "../lib/ankyverse";
 import { useUser } from "../context/UserContext";
@@ -59,7 +59,6 @@ import TimerSettingsModal from "./TimerSettingsModal";
 import AskFarcaster from "./AskFarcaster";
 
 const righteous = Righteous({ weight: "400", subsets: ["latin"] });
-const inter = Inter({ subsets: ["cyrillic"], weight: ["400"] });
 
 const ankyverseToday = getAnkyverseDay(new Date());
 const ankyverseQuestion = getAnkyverseQuestion(ankyverseToday.wink);
@@ -585,7 +584,7 @@ const GlobalApp = ({ alchemy, loginResponse }) => {
       </div>
 
       <div
-        className={`${inter.className} grow text-black relative  items-center justify-center`}
+        className={`${righteous.className} grow text-black relative  items-center justify-center`}
       >
         {displayWritingGameLanding ? (
           <div
@@ -653,7 +652,7 @@ const GlobalApp = ({ alchemy, loginResponse }) => {
         <InstallPwaModal setDisplayInstallPWA={setDisplayInstallPWA} />
       )}
       <Offcanvas
-        className={`${inter.className} bg-black text-gray-600`}
+        className={`${righteous.className} bg-black text-gray-600`}
         placement="start"
         backdrop="true"
         scroll="false"

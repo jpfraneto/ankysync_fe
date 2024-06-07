@@ -5,14 +5,14 @@ import { decodeFromAnkyverseLanguage } from "../lib/ankyverse";
 import { getOneWriting } from "../lib/irys";
 import Link from "next/link";
 import Button from "./Button";
-import { Inter } from "next/font/google";
+import { Righteous } from "next/font/google";
 import IndividualDecodedCastCard from "./farcaster/IndividualDecodedCastCard";
 import Image from "next/image";
 import { useUser } from "../context/UserContext";
 import { usePrivy } from "@privy-io/react-auth";
 import Spinner from "./Spinner";
 
-const inter = Inter({ subsets: ["cyrillic"], weight: ["400"] });
+const righteous = Righteous({ weight: "400", subsets: ["latin"] });
 
 var options = {
   weekday: "long",
@@ -181,7 +181,7 @@ const ReadIrysPage = ({ setShow }) => {
 
   return (
     <div
-      className={`${inter.className} h-full flex flex-col items-start justify-start text-left pt-8`}
+      className={`${righteous.className} h-full flex flex-col items-start justify-start text-left pt-8`}
     >
       <div className="overflow-y-scroll h-full md:w-96 mx-auto text-white ">
         <span
