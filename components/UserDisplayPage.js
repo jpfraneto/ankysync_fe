@@ -238,8 +238,8 @@ const UserDisplayPage = ({ thisUserInfo }) => {
           inside the database.
         </p>
         <div className="w-48 mt-2 mx-auto">
-          <Link href="/feed" passHref>
-            <Button buttonColor="bg-purple-600" buttonText="back to feed" />
+          <Link href="/" passHref>
+            <Button buttonColor="bg-purple-600" buttonText="back to home" />
           </Link>
         </div>
       </div>

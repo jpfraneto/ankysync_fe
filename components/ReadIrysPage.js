@@ -141,7 +141,7 @@ const ReadIrysPage = ({ setShow }) => {
     return (
       <div className="mt-4 text-white">
         <p>there was an error</p>
-        <Link href="/feed">feed</Link>
+        <Link href="/">home</Link>
       </div>
     );
   }

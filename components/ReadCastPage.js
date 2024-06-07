@@ -179,11 +179,7 @@ const ReadCastPage = () => {
         farcasterUser={farcasterUser}
         fullscreenMode={true}
       />
-      <div className="w-48 mx-auto mt-4">
-        <Link href="/feed" passHref>
-          <Button buttonText="feed" buttonColor="bg-purple-600 text-white" />
-        </Link>
-      </div>
+
     </div>
   );
 };

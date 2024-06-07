@@ -88,12 +88,7 @@ function LandingPage({
                       buttonColor="bg-gradient-to-r from-red-500 via-yellow-600 to-violet-500 text-black"
                     />
 
-                    <Link href="/feed">
-                      <Button
-                        buttonText="read"
-                        buttonColor="bg-gradient-to-r from-red-500 via-yellow-600 to-violet-500 text-black"
-                      />
-                    </Link>
+                
                   </div>
                 </div>
               )}

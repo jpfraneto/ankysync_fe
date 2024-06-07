@@ -90,9 +90,7 @@ const WelcomePage = ({ text }) => {
               buttonText="login"
               buttonColor="bg-purple-600"
             />
-            <Link href="/feed" passHref>
-              <Button buttonText="explore" buttonColor="bg-green-600" />
-            </Link>
+          
           </div>
         </div>
       )}
