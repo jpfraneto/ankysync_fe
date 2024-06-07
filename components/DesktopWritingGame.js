@@ -732,84 +732,7 @@ const DesktopWritingGame = ({
             </p>
           )} */}
 
-          {authenticated &&
-          (farcasterUser.status == "approved" ||
-            farcasterUser.signerStatus == "approved") ? (
-            <div className="bg-purple-500 text-black p-2 my-2 rounded-xl flex space-x-2 items-center justify-center">
-              <div className="flex md:flex-row flex-col space-x-2 items-center justify-center">
-                <p className="">share on farcaster?</p>
-                <div className="flex  space-x-2">
-                  <p
-                    onClick={() => setCastAs("")}
-                    className={` p-2 border-black   cursor-pointer rounded-xl ${
-                      castAs == ""
-                        ? "bg-red-500 shadow-md shadow-black border-2"
-                        : "bg-red-200 hover:bg-red-300 "
-                    }`}
-                  >
-                    don&apos;t {theAsyncCastToReply ? "reply" : "cast"}
-                  </p>
-                  <p
-                    onClick={() => {
-                      setCastAs("me");
-                      setUserWantsToCastAnon(false);
-                    }}
-                    className={` p-2 border-black  cursor-pointer rounded-xl ${
-                      castAs == "me"
-                        ? "bg-green-500 shadow-md shadow-black border-2"
-                        : "bg-green-300 hover:bg-green-300"
-                    }`}
-                  >
-                    {theAsyncCastToReply ? "reply" : "cast"} as{" "}
-                    {farcasterUser.fid}
-                  </p>
-                  <p
-                    onClick={() => {
-                      setCastAs("anon");
-                      setUserWantsToCastAnon(true);
-                    }}
-                    className={` p-2 border-black   cursor-pointer rounded-xl ${
-                      castAs == "anon"
-                        ? "bg-purple-600 shadow-md shadow-black border-2"
-                        : "bg-purple-300 hover:bg-purple-300"
-                    }`}
-                  >
-                    {theAsyncCastToReply ? "reply" : "cast"} anon
-                  </p>
-                </div>
-              </div>
-            </div>
-          ) : (
-            <div className="bg-purple-500 text-black p-2 my-2 rounded-xl flex space-x-2 items-center justify-center">
-              <div className="h-fit w-5/6 pl-8 flex justify-center mx-auto items-center">
-                <p className="text-left text-black">
-                  do you want to share what you wrote anonymously on farcaster?
-                </p>
-                <input
-                  className="mx-4 w-10 h-10 rounded-xl bg-purple-600"
-                  type="checkbox"
-                  onChange={(e) => {
-                    setUserWantsToCastAnon(!userWantsToCastAnon);
-                  }}
-                  checked={userWantsToCastAnon}
-                />
-              </div>
-
-              {/* <div>
-                {userWantsToCastAnon && (
-                  <div className="flex justify-between w-32">
-                    <Button
-                      buttonText={"preview"}
-                      buttonAction={previewCastAction}
-                      buttonColor="bg-purple-800 w-32"
-                    />
-                  </div>
-                )}
-              </div> */}
-            </div>
-          )}
-
-          {authenticated && (
+          {/* {authenticated && (
             <div className=" bg-purple-600 p-2 mt-2 mb-0 w-full rounded-xl mx-auto flex flex-col justify-start items-center ">
               <div className="flex">
                 <p className="text-black h-fit flex items-center">
@@ -861,7 +784,7 @@ const DesktopWritingGame = ({
                   </div>
                 )}
             </div>
-          )}
+          )} */}
 
           <div className="flex justify-center mt-4">
             <Button
@@ -876,8 +799,9 @@ const DesktopWritingGame = ({
               buttonColor="bg-green-600"
             />
             <Button
-              buttonText={"close"}
+              buttonText={"copy & close"}
               buttonAction={() => {
+                copyToClipboard()
                 setDisplayWritingGameLanding(false);
               }}
               buttonColor="bg-red-600"

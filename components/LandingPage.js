@@ -87,8 +87,6 @@ function LandingPage({
                       buttonText="write"
                       buttonColor="bg-gradient-to-r from-red-500 via-yellow-600 to-violet-500 text-black"
                     />
-
-                
                   </div>
                 </div>
               )}
