@@ -178,6 +178,8 @@ function MyApp({ Component, pageProps }) {
           name="twitter:image"
           content="https://anky.lat/images/touch/homescreen168.png"
         />
+        <meta property="fc:frame" content="vNext" />
+        <meta property="fc:frame:image" content="https://github.com/jpfraneto/images/blob/main/ankkky.png?raw=true" />
         <meta name="twitter:creator" content="@kithkui" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Anky" />
