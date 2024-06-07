@@ -129,7 +129,7 @@ const ReadIrysPage = ({ setShow }) => {
   const copyLinkToClipboard = async () => {
     if (!thisWriting) return;
     await navigator.clipboard.writeText(
-      `https://www.anky.lat/i/${router.query.cid}`
+      `https://www.anky.bot/i/${router.query.cid}`
     );
     setCopyLinkText("copied");
     setTimeout(() => {

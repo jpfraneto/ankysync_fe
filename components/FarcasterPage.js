@@ -40,7 +40,7 @@ const FarcasterPage = ({
   const apiRoute =
     self.location.hostname === "localhost"
       ? "http://localhost:3000"
-      : "https://api.anky.lat";
+      : "https://api.anky.bot";
 
   useEffect(() => {
     setCountdownTarget(480);
@@ -172,7 +172,7 @@ const FarcasterPage = ({
             text: secondCastText,
             signer_uuid: farcasterUser?.signer_uuid,
             embeds: [
-              { url: `https://www.anky.lat/r/${response.data.cast.hash}` },
+              { url: `https://www.anky.bot/r/${response.data.cast.hash}` },
             ],
           }
         );

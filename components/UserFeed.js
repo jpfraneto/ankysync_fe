@@ -99,7 +99,7 @@ const UserWriting = ({ writing }) => {
   };
 
   const copyThisWritingLink = async () => {
-    const newLink = `https://www.anky.lat/writing/${writing.cid}`;
+    const newLink = `https://www.anky.bot/writing/${writing.cid}`;
     await navigator.clipboard.writeText(newLink);
     setCopyLinkText("link copied");
     setTimeout(() => {

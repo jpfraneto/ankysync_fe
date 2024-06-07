@@ -18,7 +18,7 @@ const ConnectFarcasterModal = () => {
   const apiRoute =
     self.location.hostname === "localhost"
       ? "http://localhost:3000"
-      : "https://api.anky.lat";
+      : "https://api.anky.bot";
 
   useEffect(() => {
     const storedData = localStorage.getItem(LOCAL_STORAGE_KEYS.FARCASTER_USER);

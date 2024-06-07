@@ -29,7 +29,7 @@ const ReadCastPage = () => {
   const apiRoute =
     self.location.hostname === "localhost"
       ? "http://localhost:3000"
-      : "https://api.anky.lat";
+      : "https://api.anky.bot";
 
   const [cast, setCast] = useState();
   const { authenticated, login } = usePrivy();

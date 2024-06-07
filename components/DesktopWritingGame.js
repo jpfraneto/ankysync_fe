@@ -440,7 +440,7 @@ const DesktopWritingGame = ({
     try {
       let forEmbedding;
       if (text.length > 320) {
-        forEmbedding = [{ url: `https://www.anky.lat/i/${cid || cid.id}` }];
+        forEmbedding = [{ url: `https://www.anky.bot/i/${cid || cid.id}` }];
       }
       const newCastText = text.length > 320 ? `${text.slice(0, 317)}...` : text;
       const response = await axios.post(
@@ -572,7 +572,7 @@ const DesktopWritingGame = ({
       // const newCastText = `${kannadaCid}\n\nwritten through anky. you can decode this clicking on the embed on the next cast.`;
       let forEmbedding;
       if (text.length > 320) {
-        forEmbedding = [{ url: `https://www.anky.lat/i/${cid}` }];
+        forEmbedding = [{ url: `https://www.anky.bot/i/${cid}` }];
       }
       const newCastText = text.length > 320 ? `${text.slice(0, 317)}` : text;
 

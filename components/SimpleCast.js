@@ -33,7 +33,7 @@ const SimpleCast = ({ cast, pfp, userInfo = null }) => {
         console.log("the error is: ", error);
       }
     };
-    if (cast && cast?.embeds[0]?.url?.includes("anky.lat")) {
+    if (cast && cast?.embeds[0]?.url?.includes("anky.bot")) {
       fetchThisCast();
     }
   }, []);

@@ -154,7 +154,7 @@ const AskFarcaster = () => {
         }`;
 
         const forEmbedding = [
-          { url: `https://www.anky.lat/reply/${irysResponseCid}` },
+          { url: `https://www.anky.bot/reply/${irysResponseCid}` },
         ];
 
         let response;

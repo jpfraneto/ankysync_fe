@@ -89,7 +89,7 @@ const IndividualDecodedCastCard = ({
     if (
       cast &&
       cast?.embeds?.length > 0 &&
-      cast?.embeds[0]?.url?.includes("anky.lat")
+      cast?.embeds[0]?.url?.includes("anky.bot")
     ) {
       fetchThisCast();
     }

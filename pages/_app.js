@@ -170,12 +170,12 @@ function MyApp({ Component, pageProps }) {
           href="https://fonts.googleapis.com/css?family=Righteous:300,400,500"
         />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:url" content="https://anky.lat" />
+        <meta name="twitter:url" content="https://anky.bot" />
         <meta name="twitter:title" content="Anky" />
         <meta name="twitter:description" content="Tell us who you are" />
         <meta
           name="twitter:image"
-          content="https://anky.lat/images/touch/homescreen168.png"
+          content="https://anky.bot/images/touch/homescreen168.png"
         />
         <meta property="fc:frame" content="vNext" />
         <meta property="fc:frame:image" content="https://github.com/jpfraneto/images/blob/main/ankkky.png?raw=true" />
@@ -184,10 +184,10 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:title" content="Anky" />
         <meta property="og:description" content="Tell us who you are" />
         <meta property="og:site_name" content="Anky" />
-        <meta property="og:url" content="https://anky.lat" />
+        <meta property="og:url" content="https://anky.bot" />
         <meta
           property="og:image"
-          content="https://anky.lat/images/touch/homescreen144.png"
+          content="https://anky.bot/images/touch/homescreen144.png"
         />
         <script src="/main.js" defer></script>
       </Head>
