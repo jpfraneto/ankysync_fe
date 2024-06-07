@@ -709,8 +709,7 @@ const DesktopWritingGame = ({
         } flex flex-col justify-center items-center absolute w-screen top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-opacity-20 mb-4`}
       >
         <div className="border-white border-2 mx-16 md:mx-auto w-5/6 md:w-2/3 xl:w-2/5 rounded-xl bg-black p-2 text-white">
-          <p className="text-lg md:text-3xl">your writing session is over</p>
-          {time < 30 ? (
+          {/* {time < 30 ? (
             <p className="text-red-400 text-md">
               *maybe that was a bit fast. the interface recognizes when you
               write, and for now, it is set to end your session after{" "}
@@ -731,7 +730,7 @@ const DesktopWritingGame = ({
                 ? "you need to be logged in to earn $newen"
                 : responseFromPinging}
             </p>
-          )}
+          )} */}
 
           {authenticated &&
           (farcasterUser.status == "approved" ||
