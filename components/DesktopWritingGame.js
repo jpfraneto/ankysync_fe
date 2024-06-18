@@ -577,8 +577,9 @@ const DesktopWritingGame = ({
       } else if (parentCastForReplying) {
         forReplyingVariable = parentCastForReplying;
       }
+      let bloodId = ""
       if(router?.query?.bloodId ){
-        let bloodId = router?.query?.bloodId
+        bloodId = router?.query?.bloodId
       }
       
       const response = await axios.post(
@@ -590,7 +591,7 @@ const DesktopWritingGame = ({
           text: newCastText,
           parent: forReplyingVariable,
           embeds: forEmbedding,
-          bloodId: bloodId ?? ""
+          bloodId: bloodId 
         }
       );
 
