@@ -438,11 +438,9 @@ const DesktopWritingGame = ({
     console.log("inside the handleCast route", cid, parentCastForReplying);
     setIsCasting(true);
     try {
-      let forEmbedding;
-      if (text.length > 320) {
-        forEmbedding = [{ url: `https://www.anky.bot/i/${cid || cid.id}` }];
-      }
-      const newCastText = text.length > 320 ? `${text.slice(0, 317)}...` : text;
+      let forEmbedding = [{ url: `https://www.anky.bot/i/${cid || cid.id}` }];
+
+      const newCastText = text.length > 1000 ? `${text.slice(0, 1000)}...` : text;
       const response = await axios.post(
         `${process.env.NEXT_PUBLIC_API_ROUTE}/farcaster/api/cast`,
         {
@@ -570,11 +568,8 @@ const DesktopWritingGame = ({
       }
       // const kannadaCid = encodeToAnkyverseLanguage(cid);
       // const newCastText = `${kannadaCid}\n\nwritten through anky. you can decode this clicking on the embed on the next cast.`;
-      let forEmbedding;
-      if (text.length > 320) {
-        forEmbedding = [{ url: `https://www.anky.bot/i/${cid}` }];
-      }
-      const newCastText = text.length > 320 ? `${text.slice(0, 317)}` : text;
+      let forEmbedding = [{ url: `https://www.anky.bot/i/${cid}` }];;
+      const newCastText = text.length > 1000 ? `${text.slice(0, 1000)}...` : text;
 
       let forReplyingVariable = "https://warpcast.com/~/channel/anky";
       if (theAsyncCastToReply) {
@@ -594,7 +589,6 @@ const DesktopWritingGame = ({
           embeds: forEmbedding,
         }
       );
-      console.log("the response from the server here is: ", response);
 
       setCastHash(response.data.cast.hash);
       return {
@@ -691,7 +685,7 @@ const DesktopWritingGame = ({
       }
 
       setDisplayWritingGameLanding(false);
-      router.push(`/i/${irysResponseCid}`);
+      router.push(`/i/${irysResponseCid}?castHash=${castResponse?.castHash}`);
     } catch (error) {
       console.log(
         "There was an error in the handle finish session function",

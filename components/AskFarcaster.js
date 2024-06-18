@@ -148,13 +148,13 @@ const AskFarcaster = () => {
           return alert("there was an error uploading to irys");
         // use that cid to publish the question on farcaster with an embed that links to /reply/:cid
         const newCastText = `${
-          promptForFarcaster.length > 300
-            ? `${promptForFarcaster.slice(0, 300)}...`
+          promptForFarcaster.length > 1000
+            ? `${promptForFarcaster.slice(0, 1000)}...`
             : promptForFarcaster
         }`;
 
         const forEmbedding = [
-          { url: `https://www.anky.bot/reply/${irysResponseCid}` },
+          { url: `${process.env.NEXT_PUBLIC_THIS_APP_LINK}/reply/${irysResponseCid}` },
         ];
 
         let response;

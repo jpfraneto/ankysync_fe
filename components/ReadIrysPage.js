@@ -196,11 +196,14 @@ const ReadIrysPage = ({ setShow }) => {
             buttonText={copyText}
             buttonColor="bg-green-600 mx-2 w-32 text-center"
           />
-          <Button
-            buttonAction={copyLinkToClipboard}
-            buttonText={copyLinkText}
-            buttonColor="bg-purple-600 w-48 text-center"
-          />
+          {router?.params?.castHash && <Link href={`https://www.warpcast.com/ankysync/${router.params.castHash}`} passHref>
+            <Button
+              buttonText='open on warpcast'
+              buttonColor="bg-purple-600 w-48 text-center"
+            />
+          </Link>}
+          
+         
         </div>
 
         {thisWriting ? (

@@ -94,7 +94,10 @@ function MyApp({ Component, pageProps }) {
       console.log("the error is: ", error);
     }
   };
-  console.log("the router is", router)
+  let replyLink;
+  if(router?.query?.cid){
+    replyLink = `${process.env.NEXT_PUBLIC_THIS_APP_LINK}/${router.query.cid}`
+  }
   return (
     <main
       className={`${righteous.className}`}
@@ -184,12 +187,6 @@ function MyApp({ Component, pageProps }) {
           property="og:image"
           content="https://anky.bot/images/touch/homescreen144.png"
         />
-        <meta
-          property="fc:frame:button:1"
-          content="reply anonymously"
-        />
-        <meta name="fc:frame:button:1:action" content="link" />
-        <meta name="fc:frame:button:1:target" content="https://www.anky.bot" />
         <script src="/main.js" defer></script>
       </Head>
 
