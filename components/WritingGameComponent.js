@@ -45,6 +45,9 @@ const WritingGameComponent = ({
   const { login, authenticated, user } = usePrivy();
   const audioRef = useRef();
   const [preparing, setPreparing] = useState(true);
+
+  const [isMobile, setIsMobile] = useState(false);
+
   const [saveText, setSaveText] = useState("save anon");
   const [uploadingWriting, setUploadingWriting] = useState(false);
   const [upscaledUrls, setUpscaledUrls] = useState([]);
@@ -88,6 +91,19 @@ const WritingGameComponent = ({
   const textareaRef = useRef(null);
   const intervalRef = useRef(null);
   const keystrokeIntervalRef = useRef(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 666);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     if (isActive && !isDone) {
@@ -217,9 +233,8 @@ const WritingGameComponent = ({
         style={{
           boxSizing: "border-box",
           height: "calc(100vh - 33px)",
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${
-            preloadedBackground || "/images/blood.png"
-          })`,
+          backgroundImage:
+          `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/${isMobile ? "blood_mobile.jpeg" : "blood.png"}')`,
           backgroundPosition: "center center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",

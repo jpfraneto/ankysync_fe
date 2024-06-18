@@ -98,6 +98,10 @@ const GlobalApp = ({ alchemy, loginResponse }) => {
   const [promptFromAnkyBeingTagged, setPromptFromAnkyBeingTagged] = useState(
     {}
   );
+
+  const [isMobile, setIsMobile] = useState(false);
+
+
   const [refreshUsersStateLoading, setRefreshUsersStateLoading] =
     useState(false);
   const [checkingIfYouOwnAnky, setCheckingIfYouOwnAnky] = useState(false);
@@ -125,6 +129,19 @@ const GlobalApp = ({ alchemy, loginResponse }) => {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 666);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     const fetchCastInformation = async () => {
@@ -591,7 +608,7 @@ const GlobalApp = ({ alchemy, loginResponse }) => {
             className="h-full"
             style={{
               backgroundImage:
-                "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/blood.png')",
+                `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/${isMobile ? "blood_mobile.jpeg" : "blood.png"}')`,
               backgroundColor: "black",
               backgroundPosition: "center center",
               backgroundSize: "cover",
