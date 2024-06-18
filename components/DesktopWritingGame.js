@@ -601,6 +601,10 @@ const DesktopWritingGame = ({
     }
   };
 
+  const handlePaste = (event) => {
+    event.preventDefault();
+  };
+
   const previewCastAction = async () => {
     try {
       const anonCastPreview = {
@@ -929,6 +933,7 @@ const DesktopWritingGame = ({
             <textarea
               ref={textareaRef}
               disabled={finished}
+              onPaste={handlePaste}
               style={{
                 transition: "top 1s, bottom 1s, left 1s, right 1s", // smooth transition
                 position: text ? "absolute" : "static", // use absolute positioning only when text is present

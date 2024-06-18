@@ -175,6 +175,11 @@ const WritingGameComponent = ({
     setLastKeystroke(Date.now());
   };
 
+  const handlePaste = (event) => {
+    event.preventDefault();
+    alert('Pasting is disabled in this textarea');
+  };
+
   const pasteText = async () => {
     await navigator.clipboard.writeText(text);
     setCopyText("copied.");
@@ -261,6 +266,7 @@ const WritingGameComponent = ({
 
           <textarea
             ref={textareaRef}
+            onPaste={handlePaste}
             disabled={finished}
             style={{
               top: `${text && "0"}%`,

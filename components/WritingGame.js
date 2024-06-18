@@ -109,6 +109,11 @@ const WritingGame = ({
     startNewRun();
   };
 
+  const handlePaste = (event) => {
+    event.preventDefault();
+    alert('Pasting is disabled in this textarea');
+  };
+
   return (
     <div
       className={`${
@@ -135,6 +140,7 @@ const WritingGame = ({
       </div>
       <textarea
         ref={textareaRef}
+        onPaste={handlePaste}
         disabled={finished}
         style={{
           width: '100%',
