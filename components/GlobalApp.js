@@ -591,7 +591,7 @@ const GlobalApp = ({ alchemy, loginResponse }) => {
             className="h-full"
             style={{
               backgroundImage:
-                "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/mintbg.jpg')",
+                "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/blood.png')",
               backgroundColor: "black",
               backgroundPosition: "center center",
               backgroundSize: "cover",

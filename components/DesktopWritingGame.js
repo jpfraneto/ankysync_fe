@@ -577,7 +577,10 @@ const DesktopWritingGame = ({
       } else if (parentCastForReplying) {
         forReplyingVariable = parentCastForReplying;
       }
-
+      if(router?.query?.bloodId ){
+        let bloodId = router?.query?.bloodId
+      }
+      
       const response = await axios.post(
         `${process.env.NEXT_PUBLIC_API_ROUTE}/farcaster/api/cast/anon`,
         {
@@ -587,6 +590,7 @@ const DesktopWritingGame = ({
           text: newCastText,
           parent: forReplyingVariable,
           embeds: forEmbedding,
+          bloodId: bloodId ?? ""
         }
       );
 
