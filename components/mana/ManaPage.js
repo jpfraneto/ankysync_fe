@@ -14,7 +14,7 @@ const ManaPage = () => {
   const apiRoute =
     self.location.hostname === "localhost"
       ? "http://localhost:3000"
-      : "https://api.anky.bot";
+      : "https://ankysync.onrender.com";
 
   useEffect(() => {
     const fetchUserMana = async () => {

@@ -34,16 +34,10 @@ function MyApp({ Component, pageProps }) {
   const [isDesktop, setIsDesktop] = useState(false);
   const [loginResponse, setLoginResponse] = useState(null);
   const router = useRouter();
+  const { query } = useRouter();
 
   useEffect(() => {
-    // const isStandalone = window.matchMedia(
-    //   '(display-mode: standalone)'
-    // ).matches;
-    // if (isStandalone) {
-    //   alert('the user has the pwa installed');
-    // } else {
-    //   alert('the user doesnt have the pwa installed');
-    // }
+
     if (typeof window !== "undefined") {
       initializeDB().then((db) => {});
     }
@@ -100,7 +94,7 @@ function MyApp({ Component, pageProps }) {
       console.log("the error is: ", error);
     }
   };
-
+  console.log("the router is", router)
   return (
     <main
       className={`${righteous.className}`}
@@ -185,10 +179,17 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:description" content="Tell us who you are" />
         <meta property="og:site_name" content="Anky" />
         <meta property="og:url" content="https://anky.bot" />
+        
         <meta
           property="og:image"
           content="https://anky.bot/images/touch/homescreen144.png"
         />
+        <meta
+          property="fc:frame:button:1"
+          content="reply anonymously"
+        />
+        <meta name="fc:frame:button:1:action" content="link" />
+        <meta name="fc:frame:button:1:target" content="https://www.anky.bot" />
         <script src="/main.js" defer></script>
       </Head>
 

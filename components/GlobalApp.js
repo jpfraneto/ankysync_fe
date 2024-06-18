@@ -676,7 +676,7 @@ const GlobalApp = ({ alchemy, loginResponse }) => {
             <small
               onClick={() => {
                 const thisCastLink = prompt(
-                  "here, you can paste a warpcast url and reply to it writing through anky (earn newen, meditate and get to know your inherent crazyness)"
+                  "here, you can paste a warpcast url and reply to it writing through anky"
                 );
                 if (thisCastLink && thisCastLink.includes("0x")) {
                   fetchCastForReplyInformation(thisCastLink);

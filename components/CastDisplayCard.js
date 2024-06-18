@@ -28,7 +28,7 @@ const CastDisplayCard = ({ thisCast }) => {
   const apiRoute =
     self.location.hostname === "localhost"
       ? "http://localhost:3000"
-      : "https://api.anky.bot";
+      : "https://ankysync.onrender.com";
 
   const [cast, setCast] = useState(thisCast);
   const [castInfo, setCastInfo] = useState({});
