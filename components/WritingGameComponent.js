@@ -234,7 +234,7 @@ const WritingGameComponent = ({
           boxSizing: "border-box",
           height: "calc(100vh - 33px)",
           backgroundImage:
-          `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/${isMobile ? "blood_mobile.jpeg" : "blood.png"}')`,
+          `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/${isMobile ? "blood_mobile1.jpeg" : "blood1.png"}')`,
           backgroundPosition: "center center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
